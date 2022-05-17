@@ -37,7 +37,11 @@ const VehicleTable = ({ filmContext }: Props) => {
         {data ? (
           <TableBody>
             {data?.results.map((vehicle) => (
-              <VehicleRow vehicle={vehicle} filmContext={filmContext} />
+              <VehicleRow
+                vehicle={vehicle}
+                filmContext={filmContext}
+                key={vehicle.model}
+              />
             ))}
           </TableBody>
         ) : (

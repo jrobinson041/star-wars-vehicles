@@ -39,6 +39,7 @@ const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
                   <CircularProgress size={16} />
                 )
               }
+              key={filmUrl}
               disabled={!films[filmUrl]}
               onClick={() => handleSelectedFilmUrl(filmUrl)}
               variant={selectedFilmUrl === filmUrl ? "filled" : "outlined"}
