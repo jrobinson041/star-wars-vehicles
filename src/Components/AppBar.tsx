@@ -10,7 +10,7 @@ const AppBar = () => {
       <Grid container alignItems="center" spacing={3}>
         <Grid item>
           <img
-            src="./death-star.svg"
+            src="https://jrobinson041.github.io/star-wars-vehicles/death-star.svg"
             alt="Death Star Logo"
             style={styles.logo}
           />
