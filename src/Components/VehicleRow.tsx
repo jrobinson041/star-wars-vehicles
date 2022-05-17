@@ -18,7 +18,7 @@ const VehicleRow = ({ vehicle, filmContext }: Props) => {
 
   return (
     <>
-      <TableRow>
+      <TableRow style={styles.row}>
         <TableCell>
           <IconButton
             aria-label="expand row"
@@ -42,6 +42,12 @@ const VehicleRow = ({ vehicle, filmContext }: Props) => {
       </TableRow>
     </>
   );
+};
+
+const styles = {
+  row: {
+    cursor: "pointer",
+  },
 };
 
 interface Props {

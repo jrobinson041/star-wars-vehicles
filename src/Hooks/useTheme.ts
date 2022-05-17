@@ -4,8 +4,8 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { red, blue } from "@mui/material/colors";
 
 const useTheme = () => {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  // const prefersDarkMode = false;
+  // const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const prefersDarkMode = false;
 
   const theme = useMemo(
     () =>

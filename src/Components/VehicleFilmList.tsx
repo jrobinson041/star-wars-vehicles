@@ -9,7 +9,12 @@ const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
   return (
     <Grid container spacing={2} alignItems="center" style={styles.container}>
       <Grid item>
-        <Typography>Film List:</Typography>
+        <Typography color="secondary">
+          {vehicle.name}{" "}
+          <Typography component="span" color="textSecondary">
+            was featured in:
+          </Typography>
+        </Typography>
       </Grid>
       <Grid item>
         <Stack direction="row" spacing={1}>
