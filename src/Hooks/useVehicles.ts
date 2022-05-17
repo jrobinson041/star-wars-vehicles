@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Vehicle } from "../Interfaces/vehicle";
 import API from "../API";
+import EasterEgg from "../EasterEgg.json";
 
 const useVehicles = (page: number) => {
   const [memo, setMemo] = useState<Memo>({}); // For memoization, fewer requests needed
@@ -8,11 +9,16 @@ const useVehicles = (page: number) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await API.get("/vehicles/", {
+      let res = await API.get("/vehicles/", {
         params: {
           page: page + 1, // Our page is indexed at 0, SWAPI is indexed at 1
         },
       });
+
+      // Easter egg ;)
+      if (page === 3) {
+        res.data.results.push(EasterEgg);
+      }
 
       setMemo({
         ...memo,

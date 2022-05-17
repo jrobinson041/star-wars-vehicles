@@ -18,7 +18,7 @@ const VehicleRow = ({ vehicle, filmContext }: Props) => {
 
   return (
     <>
-      <TableRow style={styles.row}>
+      <TableRow style={styles.row} onClick={() => setShowFilms(!showFilms)}>
         <TableCell>
           <IconButton
             aria-label="expand row"

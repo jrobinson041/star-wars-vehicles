@@ -1,0 +1,18 @@
+{
+  "name": "The Loft on Wheels",
+  "model": "Lifestyle Vehicle",
+  "manufacturer": "Canoo",
+  "cost_in_credits": "34750",
+  "length": "8.6",
+  "max_atmosphering_speed": "30",
+  "crew": "46",
+  "passengers": "6",
+  "cargo_capacity": "50000",
+  "consumables": "2 months",
+  "vehicle_class": "wheeled",
+  "pilots": [],
+  "films": [],
+  "created": "2022-05-16T21:36:25.724000Z",
+  "edited": "2022-05-16T22:30:21.661000Z",
+  "url": "https://www.canoo.com/canoo/"
+}
