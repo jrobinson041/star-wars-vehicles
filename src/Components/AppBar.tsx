@@ -6,13 +6,11 @@ const AppBar = () => {
     <MuiAppBar style={styles.appBar} enableColorOnDark position="sticky">
       <Grid container alignItems="center" spacing={3}>
         <Grid item>
-          <a href="#" style={styles.link}>
-            <img
-              src="./death-star.svg"
-              alt="Death Star Logo"
-              style={styles.logo}
-            />
-          </a>
+          <img
+            src="./death-star.svg"
+            alt="Death Star Logo"
+            style={styles.logo}
+          />
         </Grid>
         <Grid item>
           <Typography display="inline" variant="h5" style={styles.title}>
@@ -43,6 +41,7 @@ const styles = {
   },
   logo: {
     width: 50,
+    cursor: "default",
     marginTop: 5,
   },
   title: {

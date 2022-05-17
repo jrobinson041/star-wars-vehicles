@@ -17,6 +17,9 @@ const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
         </Typography>
       </Grid>
       <Grid item>
+        {!vehicle.films.length && (
+          <Typography color="primary">No Films</Typography>
+        )}
         <Stack direction="row" spacing={1}>
           {vehicle.films.map((filmUrl) => (
             <Chip
