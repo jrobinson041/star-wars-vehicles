@@ -25,7 +25,6 @@ const useVehicles = (page: number) => {
         [page]: res.data,
       });
       setData(res.data);
-      console.log(res.data);
     };
 
     if (memo[page]) {
