@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  AppBar as MuiAppBar,
-  Grid,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { AppBar as MuiAppBar, Grid, Typography } from "@mui/material";
+import useIsMobile from "../Hooks/useIsMobile";
 
 const AppBar = () => {
-  const theme = useTheme();
-  const large = useMediaQuery(theme.breakpoints.up("md"));
+  const isMobile = useIsMobile();
 
   return (
     <MuiAppBar style={styles.appBar} enableColorOnDark position="sticky">
@@ -26,7 +20,7 @@ const AppBar = () => {
             Non-Hyperdrive Vehicle Database
           </Typography>
         </Grid>
-        {large && (
+        {!isMobile && (
           <Grid item>
             <Typography
               variant="caption"

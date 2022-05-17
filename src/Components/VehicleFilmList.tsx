@@ -1,24 +1,16 @@
 import React from "react";
-import {
-  Chip,
-  CircularProgress,
-  Grid,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Chip, CircularProgress, Grid, Stack, Typography } from "@mui/material";
 import { FilmContextType } from "../Interfaces/film";
 import { Vehicle } from "../Interfaces/vehicle";
-import { useTheme } from "@mui/material/styles";
+import useIsMobile from "../Hooks/useIsMobile";
 
 const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
   const { films, selectedFilmUrl, setSelectedFilmUrl } = filmContext;
-  const theme = useTheme();
-  const small = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useIsMobile();
 
   const handleSelectedFilmUrl = (url: string) => {
     setSelectedFilmUrl(url);
-    if (small) {
+    if (isMobile) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };

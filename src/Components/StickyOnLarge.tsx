@@ -1,13 +1,11 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
+import useIsMobile from "../Hooks/useIsMobile";
 
 const StickyOnLarge = ({ children }: Props) => {
-  const theme = useTheme();
-  const large = useMediaQuery(theme.breakpoints.up("md"));
+  const isMobile = useIsMobile();
 
   return (
-    <div style={large ? { position: "sticky", top: 92, left: 0 } : {}}>
+    <div style={!isMobile ? { position: "sticky", top: 92, left: 0 } : {}}>
       {children}
     </div>
   );
