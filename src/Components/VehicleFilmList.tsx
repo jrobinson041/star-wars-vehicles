@@ -1,10 +1,27 @@
 import React from "react";
-import { Chip, CircularProgress, Grid, Stack, Typography } from "@mui/material";
+import {
+  Chip,
+  CircularProgress,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { FilmContextType } from "../Interfaces/film";
 import { Vehicle } from "../Interfaces/vehicle";
+import { useTheme } from "@mui/material/styles";
 
 const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
   const { films, selectedFilmUrl, setSelectedFilmUrl } = filmContext;
+  const theme = useTheme();
+  const small = useMediaQuery(theme.breakpoints.down("md"));
+
+  const handleSelectedFilmUrl = (url: string) => {
+    setSelectedFilmUrl(url);
+    if (small) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <Grid container spacing={2} alignItems="center" style={styles.container}>
@@ -31,7 +48,7 @@ const VehicleFilmList = ({ vehicle, filmContext }: Props) => {
                 )
               }
               disabled={!films[filmUrl]}
-              onClick={() => setSelectedFilmUrl(filmUrl)}
+              onClick={() => handleSelectedFilmUrl(filmUrl)}
               variant={selectedFilmUrl === filmUrl ? "filled" : "outlined"}
               color="secondary"
               style={styles.chip}

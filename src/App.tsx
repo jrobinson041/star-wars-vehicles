@@ -6,6 +6,7 @@ import VehicleTable from "./Components/VehicleTable";
 import FilmDetails from "./Components/FilmDetails";
 import useTheme from "./Hooks/useTheme";
 import useFilms from "./Hooks/useFilms";
+import StickyOnLarge from "./Components/StickyOnLarge";
 
 function App() {
   const theme = useTheme();
@@ -21,7 +22,9 @@ function App() {
             <VehicleTable filmContext={filmContext} />
           </Grid>
           <Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
-            <FilmDetails filmContext={filmContext} />
+            <StickyOnLarge>
+              <FilmDetails filmContext={filmContext} />
+            </StickyOnLarge>
           </Grid>
         </Grid>
       </Container>
