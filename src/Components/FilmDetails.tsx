@@ -10,7 +10,7 @@ const FilmDetails = ({ filmContext }: Props) => {
     return (
       <Card style={styles.container}>
         <CardHeader
-          title="Click on a Vehicle to Start"
+          title="Click on a Vehicle to Begin"
           titleTypographyProps={{
             color: "textSecondary",
           }}
