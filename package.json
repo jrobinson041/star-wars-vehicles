@@ -2,6 +2,7 @@
   "name": "star-wars-vehicles",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jrobinson041.github.io/star-wars-vehicles/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --repo https://github.com/jrobinson041/star-wars-vehicles.git",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
