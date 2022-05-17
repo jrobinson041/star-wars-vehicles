@@ -48,6 +48,7 @@ const VehicleTable = ({ filmContext }: Props) => {
         component="div"
         count={data?.count || 0}
         rowsPerPage={10}
+        rowsPerPageOptions={[10]}
         page={page}
         onPageChange={(e, page) => setPage(page)}
       />
