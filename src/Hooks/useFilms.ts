@@ -26,7 +26,7 @@ const useFilms = () => {
 
   // Fetch if necessary when new selectedFilmUrl is selected
   useEffect(() => {
-    if (!films[selectedFilmUrl]) {
+    if (selectedFilmUrl && !films[selectedFilmUrl]) {
       fetchFilm(selectedFilmUrl);
     }
   }, [selectedFilmUrl, fetchFilm, films]);
