@@ -2,6 +2,7 @@
   "name": "star-wars-vehicles",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jrobinson041.github.io/star-wars-vehicles/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

@@ -31,6 +31,8 @@ const FilmDetails = ({ filmContext }: Props) => {
         title={`Episode ${episodeToRoman(film.episode_id)}: ${film.title}`}
         titleTypographyProps={{
           color: "textPrimary",
+          variant: "h4",
+          style: { fontWeight: 100 },
         }}
       />
       <CardContent>

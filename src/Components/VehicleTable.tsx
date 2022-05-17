@@ -9,6 +9,7 @@ import {
   TableHead,
   TablePagination,
   TableRow,
+  Typography,
 } from "@mui/material";
 import { FilmContextType } from "../Interfaces/film";
 import useVehicles from "../Hooks/useVehicles";
@@ -20,6 +21,9 @@ const VehicleTable = ({ filmContext }: Props) => {
 
   return (
     <TableContainer component={Paper} style={styles.container}>
+      <Typography style={styles.title} variant="h3" color="primary">
+        Star Wars Vehicles
+      </Typography>
       <Table>
         <TableHead>
           <TableRow>
@@ -54,6 +58,11 @@ const VehicleTable = ({ filmContext }: Props) => {
 const styles = {
   container: {
     width: "100%",
+  },
+  title: {
+    paddingTop: 10,
+    paddingLeft: 15,
+    fontWeight: 100,
   },
   loader: {
     alignText: "center",
